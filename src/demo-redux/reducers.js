@@ -39,7 +39,7 @@ const filter = (state='SHOW_ALL', action) => {
 
 const reducers = combineReducers({
   todos: toDo,
-  visibilityFilter: filter
+  filter: filter
 })
 
 export default reducers;

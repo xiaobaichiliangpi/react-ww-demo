@@ -8,12 +8,19 @@ import Demo4 from './demo4'
 import Demo41 from './demo4/forwardRef'
 import Demo5 from './demo5'
 import Redux from './demo-redux'
+import VisibleTodoList from './redux-react/container/visibileTodoList'
+import AddTodo from './redux-react/container/addTodo'
+import Footer from './redux-react/container/footer'
+import {Provider} from 'react-redux'
+import {createStore} from 'redux'
+import reducers from './demo-redux/reducers'
 
 
 class App extends Component {
   constructor(props) {
     super(props)
     this.inputRef = null
+    this.store = createStore(reducers)
     this.state = {
       value: 1
     }
@@ -43,6 +50,13 @@ class App extends Component {
         <Demo5></Demo5>
         <p>REDUX</p>
         <Redux></Redux>
+        <Provider store={this.store}>
+          <div style={{border: '1px solid #eee', margin: '20px 0'}}>
+            <AddTodo></AddTodo>
+            <VisibleTodoList test="123"></VisibleTodoList>
+            <Footer></Footer>
+          </div>
+        </Provider>
       </div>
     );
   }
