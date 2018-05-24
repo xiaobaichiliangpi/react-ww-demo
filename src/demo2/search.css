@@ -1,0 +1,24 @@
+.search {
+  width: 400px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.table-title {
+  display: flex;
+  justify-content: space-between;
+}
+.table-title span:first-child {
+}
+.product-title {
+  text-align-last: left;
+}
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.square-btn {
+  width: 30px;
+  height: 30px;
+}
